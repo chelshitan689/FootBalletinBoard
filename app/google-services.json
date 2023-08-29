@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "935937286733",
+    "project_id": "tactical-football",
+    "storage_bucket": "tactical-football.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935937286733:android:f15d882f52752602d7b204",
+        "android_client_info": {
+          "package_name": "com.chelshitan.footballetinboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935937286733-s1u62skkge2t7k9m085g0n7vqvbritnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvE5aeEOY51xjq6PDuBYcN647_uKU7Y5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935937286733-s1u62skkge2t7k9m085g0n7vqvbritnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935937286733:android:ec7490dabda2f77fd7b204",
+        "android_client_info": {
+          "package_name": "com.chelshitan.tacticalfootball_legacy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935937286733-s1u62skkge2t7k9m085g0n7vqvbritnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvE5aeEOY51xjq6PDuBYcN647_uKU7Y5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935937286733-s1u62skkge2t7k9m085g0n7vqvbritnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935937286733:android:1ed9f27fb069b8f5d7b204",
+        "android_client_info": {
+          "package_name": "com.first.tacticalfootball"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935937286733-s1u62skkge2t7k9m085g0n7vqvbritnu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvE5aeEOY51xjq6PDuBYcN647_uKU7Y5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935937286733-s1u62skkge2t7k9m085g0n7vqvbritnu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1116144326881149~3246866204"
+    }
+  ],
+  "configuration_version": "1"
+}
