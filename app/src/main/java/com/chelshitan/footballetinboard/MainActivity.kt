@@ -1,8 +1,7 @@
 package com.chelshitan.footballetinboard
 import Task
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.chelshitan.footballetinboard.databinding.ActivityMainBinding
 import com.google.firebase.firestore.ktx.firestore
@@ -16,12 +15,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // レイアウトを読み込み
+        // メインアクティビティ内で以下のように呼び出す
+        val task = MyTask()
+        task.execute()
+
+
+
+            // レイアウトを読み込み
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Firestoreをインスタンス化
         val db = Firebase.firestore
+
+        binding.button.setOnClickListener{
+            binding.textView.text = testtext
+        }
 
         // ボタンを押したときの処理
         binding.addButton.setOnClickListener {
@@ -75,4 +84,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
+
+
+
+
