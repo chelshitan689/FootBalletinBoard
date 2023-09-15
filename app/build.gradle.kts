@@ -69,7 +69,12 @@ dependencies {
 
     /// Fuel library
     implementation ("com.github.kittinunf.fuel:fuel:2.3.1")
+    implementation ("com.github.kittinunf.fuel:fuel-android:2.3.1")
+    implementation ("com.github.kittinunf.fuel:fuel-json:2.3.1")
     implementation ("com.google.code.gson:gson:2.8.8")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+
 
 
 }
