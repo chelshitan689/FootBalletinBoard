@@ -15,6 +15,7 @@ import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.json.JSONObject
 
 
 class MainActivity : AppCompatActivity() {
@@ -125,7 +126,7 @@ class MainActivity : AppCompatActivity() {
     suspend fun APIRequest(){
 
 /// リクエストURL
-        val url = "https://api.football-data.org/v4/competitions/PL"
+        val url = "https://api.football-data.org/v4/competitions/PL/matches"
 /// ヘッダー（キー・値のHashMap）
         val headers = hashMapOf(
             "X-Auth-Token" to "b5c29124015e48da8293f7fe417e3565"
@@ -151,7 +152,33 @@ class MainActivity : AppCompatActivity() {
                     Log.d(TAG, "Responsed JSON : "
                             +data.toString())
 
-                    testtext = data.getString("id")
+                    try {
+                        // "matches" 配列を取得
+                        val matchesArray = data.getJSONArray("matches")
+// 配列内の最初のオブジェクトを取得
+                        val firstMatchObject = matchesArray.getJSONObject(0) // もし複数のmatchesオブジェクトがある場合はループを使用することが考えられます
+// "area" オブジェクト内の "id" を取得
+                        val id = firstMatchObject.getJSONObject("season").getInt("currentMatchday")//getJSONObject("season").getInt("currentMatchday")
+
+
+                    // コードの続き
+                        var currentMatchObject: Array<JSONObject?> = arrayOfNulls(10)
+                        var HomeTeamName: Array<String?> = arrayOfNulls(10)
+                        var AwayTeamName: Array<String?> = arrayOfNulls(10)
+                        for (i in 0..9) {
+                            currentMatchObject[i] =
+                                matchesArray.getJSONObject((id - 1) * 10 + i) // もし複数のmatchesオブジェクトがある場合はループを使用することが考えられます
+                            HomeTeamName[i] = currentMatchObject[i]?.getJSONObject("homeTeam")?.getString("name")
+                            AwayTeamName[i] = currentMatchObject[i]?.getJSONObject("awayTeam")?.getString("name")
+                        }
+
+
+
+                        testtext = HomeTeamName[0]!!
+
+                    } catch (e: Exception) {
+                        Log.e("TAG", "エラー発生: ${e.message}", e)
+                    }
                 }
 
                 else -> {}
